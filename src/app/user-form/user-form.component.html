@@ -13,8 +13,11 @@
           <label for="email">Email Address: </label>
           <input [(ngModel)]="model.email" [email]="true" type="email" name="email" id="email" class="form-control" placeholder="Enter Email" required
             #name="ngModel">
-          <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          <div [hidden]="name.pristine || name.value!==''" class="alert alert-danger">
             Email is required
+          </div>
+          <div [hidden]="name.pristine || name.valid" class="alert alert-danger">
+            Email is invalid
           </div>
         </div>
         <div class="form-group">
