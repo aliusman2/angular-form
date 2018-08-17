@@ -13,3 +13,11 @@
 .ng-invalid:not(form)  {
   border-left: 5px solid #a94442; /* red */
 }
+
+.rtl {
+  text-align: right;
+}
+
+.rtl ::-webkit-input-placeholder {
+  text-align: right;
+}

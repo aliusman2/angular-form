@@ -1,35 +1,40 @@
-<div class="container">
+<div class="container" [ngClass]="{ 'rtl': isRtl }">
   <div class="row align-items-center form-container">
     <div class="col-md-6 offset-md-3">
       <form (ngSubmit)="onSubmit()" #userForm="ngForm">
-        <h2 class="text-center">Login</h2>
+        <h2 class="text-center">{{ 'LOGIN' | translate }}</h2>
         <div *ngIf="authenticated">
-          <h2>You are logged in</h2>
+          <h2>{{ 'LOGGEDIN' | translate }}</h2>
         </div>
         <div *ngIf="authenticated!==undefined && !authenticated">
-          <h2>Incorrect email or password</h2>
+          <h2>{{ 'INVALID' | translate }}</h2>
         </div>
         <div class="form-group">
-          <label for="email">Email Address: </label>
-          <input [(ngModel)]="model.email" [email]="true" type="email" name="email" id="email" class="form-control" placeholder="Enter Email" required
+          <label for="email">{{ 'EMAIL-LABEL' | translate }}</label>
+          <input [(ngModel)]="model.email" [email]="true" type="email" name="email" id="email" class="form-control" placeholder="{{ 'EMAIL-PLACEHOLDER' | translate }}" required
             #name="ngModel">
           <div [hidden]="name.pristine || name.value!==''" class="alert alert-danger">
-            Email is required
+            {{ 'EMAIL-REQUIRED' | translate }}
           </div>
           <div [hidden]="name.pristine || name.valid" class="alert alert-danger">
-            Email is invalid
+            {{ 'EMAIL-INVALID' | translate}}
           </div>
         </div>
         <div class="form-group">
-          <label for="password">Password: </label>
-          <input [(ngModel)]="model.password" type="password" name="password" id="password" class="form-control" placeholder="Password" required
+          <label for="password">{{ 'PASSWORD-LABEL' | translate }}</label>
+          <input [(ngModel)]="model.password" type="password" name="password" id="password" class="form-control" placeholder="{{ 'PASSWORD-PLACEHOLDER' | translate }}" required
             #password="ngModel">
           <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
-            Password is required
+            {{ 'PASSWORD-REQUIRED' | translate }}
           </div>
         </div>
-        <button type="submit" class="btn btn-primary offset-md-5" [disabled]="!userForm.valid">Sign In</button>
+        <button type="submit" class="btn btn-primary offset-md-5" [disabled]="!userForm.valid">{{ 'SIGNIN' | translate }}</button>
       </form>
+      <div class="mt-4">
+        <h3>{{ 'LANGUAGE-SELECT' | translate }}</h3>
+        <button class="btn btn-primary" (click)="setUrdu()">{{ 'URDU' | translate }}</button>
+        <button class="btn btn-primary ml-4" (click)="setEnglish()">{{ 'ENGLISH' | translate }}</button>
+      </div>
     </div>
   </div>
 </div>

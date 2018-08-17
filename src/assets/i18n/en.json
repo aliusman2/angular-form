@@ -1,0 +1,17 @@
+{
+    "HELLO" : "Hello {{value}}",
+    "LOGIN" : "Login",
+    "LOGGEDIN": "You are logged in",
+    "INVALID": "Incorrect email or password",
+    "EMAIL-LABEL": "Email Address: ",
+    "EMAIL-PLACEHOLDER": "Enter Email",
+    "EMAIL-REQUIRED": "Email is required",
+    "EMAIL-INVALID": "Email is invalid",
+    "PASSWORD-LABEL": "Password: ",
+    "PASSWORD-PLACEHOLDER": "Password",
+    "PASSWORD-REQUIRED": "Password is required",
+    "SIGNIN": "Sign In",
+    "LANGUAGE-SELECT": "Select Language: ",
+    "URDU": "Urdu",
+    "ENGLISH": "English"
+}

@@ -1,0 +1,16 @@
+{
+    "LOGIN": "ذیل میں لاگ ان کریں",
+    "LOGGEDIN": "آپ لاگ ان ہیں",
+    "INVALID": "غلط ای میل یا پاس ورڈ",
+    "EMAIL-LABEL": "  :ای میل اڈریس",
+    "EMAIL-PLACEHOLDER": "ای میل درج کریں",
+    "EMAIL-REQUIRED": "ای میل کی ضرورت ہے",
+    "EMAIL-INVALID": "ای میل غلط ہے",
+    "PASSWORD-LABEL": ":پاس ورڈ",
+    "PASSWORD-PLACEHOLDER": "پاس ورڈ",
+    "PASSWORD-REQUIRED": "پاس ورڈ کی ضرورت ہے",
+    "SIGNIN": "داخلہ",
+    "LANGUAGE-SELECT": ":زبان منتخب کریں",
+    "URDU": "اردو",
+    "ENGLISH": "انگریزی"
+}
